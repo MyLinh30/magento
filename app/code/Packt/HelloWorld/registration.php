@@ -8,3 +8,5 @@ ComponentRegistrar::register(
     'Packt_HelloWorld',
     __DIR__
 );
+
+

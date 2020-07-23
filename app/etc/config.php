@@ -242,6 +242,7 @@ return [
         'Klarna_Kp' => 1,
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
+        'Packt_CustomerAttribute' => 1,
         'Packt_HelloWorld' => 1,
         'Packt_SEO' => 1,
         'Temando_ShippingRemover' => 1,
