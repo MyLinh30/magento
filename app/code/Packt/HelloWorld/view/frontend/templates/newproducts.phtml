@@ -1,0 +1,13 @@
+<h2>New Products</h2>
+<table border="1">
+	<tr>
+		<th>Tên sản phẩm</th>
+	</tr>
+    <?php foreach ($block->getProducts() as $product): ?>
+		<tr>
+			<td>
+                <?php echo $product->getName() ?>
+			</td>
+		</tr>
+    <?php endforeach; ?>
+</table>
