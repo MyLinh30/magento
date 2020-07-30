@@ -3,7 +3,7 @@
         "urn:magento:module:Magento_Backend:etc/menu.xsd">
 
     <menu>
-        
+
         <add
                 id="Packt_HelloWorld::helloworld"
                 title="HelloWorld"
@@ -30,14 +30,6 @@
                 action="helloworld/subscription/"
                 resource="Packt_HelloWorld::subscription"
         />
-        <add
-                id="Packt_HelloWorld::component"
-                title="Components"
-                module="Packt_HelloWorld"
-                sortOrder="80"
-                parent="Packt_HelloWorld::helloworld"
-                action="helloworld/component/"
-                resource="Packt_HelloWorld::helloworld"
-        />
+
     </menu>
 </config>

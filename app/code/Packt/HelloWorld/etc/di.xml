@@ -2,18 +2,45 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation=
                 "urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Catalog\Model\Product">
-        <plugin name="Packt_HelloWorld::productName"
-                type="Packt\HelloWorld\Plugin\Catalog\ProductAround" sortOrder="1" />
-    </type>
+
+<!--    <type name="Magento\Catalog\Model\Product">-->
+
+<!--        <plugin name="Packt_HelloWorld::productName"-->
+<!--                type="Packt\HelloWorld\Plugin\Catalog\ProductAround" sortOrder="1" />-->
+<!--    </type>-->
 
 
 
-    <type name="Magento\Framework\Console\CommandList">
+
+<!--&lt;!&ndash;-->
+<!--    </type>-->
+
+<!--    <type name="Packt\HelloWorld\Controller\Index\Example">-->
+<!--            <plugin name="Packt_HelloWorld_Plugin" type="Packt\HelloWorld\Plugin\ExamplePlugin" sortOrder="10" disabled="false"  />-->
+
+<!--    </type>-->
+
+
+
+<!--    <type name="Magento\Framework\Console\CommandList">-->
+<!--        <arguments>-->
+<!--            <argument name="commands" xsi:type="array">-->
+<!--                <item name="helloWorldCommand" xsi:type="object">Packt\HelloWorld\Console\Command\HelloWorldCommand</item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
-            <argument name="commands" xsi:type="array">
-                <item name="helloWorldCommand" xsi:type="object">Packt\HelloWorld\Console\Command\HelloWorldCommand</item>
+            <argument name="collections" xsi:type="array">
+                <item name="mageplaza_helloworld_post_listing_data_source" xsi:type="string">Packt\HelloWorld\Model\ResourceModel\Post\Grid\Collection</item>
             </argument>
         </arguments>
     </type>
+    <virtualType name="Packt\HelloWorld\Model\ResourceModel\Post\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">mageplaza_helloworld_post</argument>
+            <argument name="resourceModel" xsi:type="string">Packt\HelloWorld\Model\ResourceModel\Post</argument>
+        </arguments>
+    </virtualType>
 </config>

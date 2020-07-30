@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Packt_UICompo::uicompo"
+                title="UI Components"
+                module="Packt_UICompo"
+                sortOrder="51"
+                resource="Packt_UICompo::uicompo" />
+        <add
+                id="Packt_UICompo::post"
+                title="Manage Posts"
+                module="Packt_UICompo"
+                sortOrder="10"
+                action="uicompo/post"
+                resource="Packt_UICompo::post"
+                parent="Packt_UICompo::uicompo" />
+        <add
+                id="Packt_UICompo::hello_configuration"
+                title="Configuration"
+                module="Packt_UICompo"
+                sortOrder="99"
+                parent="Packt_UICompo::uicompo"
+                action="adminhtml/system_config/edit/section/helloworld"
+                resource="Packt_UICompo::helloworld_configuration" />
+    </menu>
+</config>
