@@ -7,6 +7,7 @@ class MageMovie extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb {
         $this->_init('magenest_movie',
                      'movie_id');
     }
+
 }
 
 

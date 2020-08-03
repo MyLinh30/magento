@@ -9,6 +9,7 @@ class Subscription extends Container
     {
         $this->_blockGroup = 'Packt_HelloWorld';
         $this->_controller = 'adminhtml_subscription';
+
         parent::_construct();
     }
 }

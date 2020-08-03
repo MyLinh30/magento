@@ -10,6 +10,10 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     {
         $this->_init('Magenest\Movie\Model\Actor','Magenest\Movie\Model\ResourceModel\Actor');
     }
+    public function countRecords(){
+        $totalRecords = $this->getConnection()->fetchOne($this->getSelectCountSql());
+        return $totalRecords;
+    }
 
 
 }

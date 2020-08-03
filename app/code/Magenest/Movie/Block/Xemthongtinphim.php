@@ -36,8 +36,6 @@ class Xemthongtinphim extends Template
         return $res;
 
 
-
-        return($res);
     }
 
 
