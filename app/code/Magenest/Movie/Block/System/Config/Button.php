@@ -57,7 +57,6 @@ class Button extends Field
                 'label' => __('RELOAD PAGE'),
                 'onclick' =>  'window.location.reload(true)'
             ]
-
         );
 
         return $button->toHtml();

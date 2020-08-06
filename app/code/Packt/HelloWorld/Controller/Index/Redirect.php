@@ -7,7 +7,7 @@ class Redirect extends Action
 {
     public function execute()
     {
-        $this->_redirect('helloworld');
+        $this->_redirect('helloworld/test');
         //$this->_forward('index');
     }
 }

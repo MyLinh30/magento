@@ -28,10 +28,12 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         $data = $this->getConnection()->fetchAll($query);
         return $data;
     }
-    public function countRecords(){
-        $totalRecords = $this->getConnection()->fetchOne($this->getSelectCountSql());
-        return $totalRecords;
+
+    public function getnumbercolumns(){
+        $total = $this->getConnection()->fetchOne($this->getSelectCountSql());
+        return $total;
     }
+
 
 
 }

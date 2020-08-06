@@ -19,7 +19,7 @@ class ActorTableField extends Field
 
     protected function _getElementHtml(AbstractElement $element)
     {
-        $element->setData('value', $this->_actorCollection->countRecords());
+        $element->setData('value', $this->_actorCollection->getnumbercolumns());
         $element->setReadonly(true);
         return $element->getElementHtml();
     }

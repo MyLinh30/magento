@@ -16,11 +16,11 @@
                    showInDefault="1" showInWebsite="1" showInStore="1">
 
                 <label>Magenest Movie settings</label>
-
                 <field id="txt_field" translate="label"
                        type="text" sortOrder="10" showInDefault="1"
                        showInWebsite="1" showInStore="1">
                     <label>Text Field</label>
+<!--                    <backend_model>Magenest\Movie\Model\Config\Backend\Custom</backend_model>-->
                 </field>
 
                 <field id="yes_no" translate="label"
@@ -40,7 +40,7 @@
                        type="text" sortOrder="20" showInDefault="1"
                        showInWebsite="1" showInStore="1">
                     <label>Magenest Movie</label>
-                    <frontend_model>Magenest\Movie\Block\System\Config\Form\Field\Disabled</frontend_model>
+                    <frontend_model>Magenest\Movie\Block\System\Config\Form\Field\Readonly</frontend_model>
                 </field>
                 <field id="magenest_get_all_actor" translate="label"
                        type="text" sortOrder="20" showInDefault="1"

@@ -3,7 +3,7 @@
 namespace Magenest\Movie\Block\System\Config\Form\Field;
 use Magento\Framework\Data\Form\Element\AbstractElement;
 
-class Disabled extends \Magento\Config\Block\System\Config\Form\Field
+class Readonly extends \Magento\Config\Block\System\Config\Form\Field
 {
 
     private $movieCollection;
@@ -17,9 +17,8 @@ class Disabled extends \Magento\Config\Block\System\Config\Form\Field
 
     protected function _getElementHtml(AbstractElement $element)
     {
-        $recordsOfMovie = $this->movieCollection->countRecords();
-
-        $element->setData(['readonly'=>'true','value'=>$recordsOfMovie]);
+        $numbers = $this->movieCollection->getnumbercolumns();
+        $element->setData(['readonly'=>'true','value'=>$numbers]);
         return $element->getElementHtml();
     }
 }

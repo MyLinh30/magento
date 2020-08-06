@@ -8,9 +8,9 @@ class Director extends \Magento\Framework\Model\AbstractModel
     const STATUS_APPROVED = 'approved';
     const STATUS_DECLINED = 'declined';
     public function __construct(
-        Context $context,
+        \Magento\Framework\Model\Context $context,
         \Magento\Framework\Registry $registry,
-        ResourceModel\AbstractResource $resource = null,
+        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
         \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
         array $data = []
     ) {
