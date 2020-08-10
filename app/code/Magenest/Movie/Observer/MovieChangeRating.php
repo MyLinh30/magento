@@ -12,7 +12,7 @@ class MovieChangeRating implements ObserverInterface
 
     private $movieModel;
 
-    public function __construct(MMovie $movie)
+    public function __construct(MageMovie $movie)
     {
         $this->movieModel = $movie;
     }
@@ -21,7 +21,7 @@ class MovieChangeRating implements ObserverInterface
     {
 //        $movie = $this->_objectManager->create('Magenest\Movie\Model\MageMovie');
 //        $movie->load($observer->getMovie());
-        $movie = $observer->getData('mvie');
+        $movie = $observer->getData('movie');
         if ($movie->getRating() != 0) {
             $movie->setRating(0);
             $movie->save();
